@@ -5,15 +5,15 @@
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
+    <div class="carousel-inner" >
       <div class="carousel-item active">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(24).webp" class="d-block w-100" alt="...">
+        <img src="../assets/image/safi-salle.jpg" class="d-block w-100" style="aspect-ratio: 3/2;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(25).webp" class="d-block w-100" alt="...">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(25).webp" class="d-block w-100"  style="aspect-ratio: 3/2;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(26).webp" class="d-block w-100" alt="...">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(26).webp" class="d-block w-100"  style="aspect-ratio: 3/2;" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

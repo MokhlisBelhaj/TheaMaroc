@@ -5,15 +5,15 @@
     <button type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="aspect-ratio: 4/2;">
     <div class="carousel-item active">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100" alt="...">
+      <img src="../assets/image/slide1.jpg" class="d-block w-100"  alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100" alt="...">
+      <img src="../assets/image/slide2.jpg" class="d-block w-100"  alt="...">
     </div>
     <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="...">
+      <img src="../assets/image/slide3.jpg" class="d-block w-100"  alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
