@@ -28,7 +28,7 @@
     </div>
     <div class="row my-2">
       <div class="col">
-        <img src="../assets/imagE/about2.jpg" alt="" />
+        <img src="../assets/imagE/about1.png" alt="" />
       </div>
       <div class="col">
        <p> Nous sommes TheaMaroc, une équipe passionnée de théâtre et de

@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"
-        ><img src="../assets/logo.png" alt="" style="width: 40%"
-      /></a>
+      <a class="navbar-brand" href="#">
+        <img src="../assets/logo.png" alt="" style="width: 40%" />
+      </a>
       <button
         class="navbar-toggler bg-warning"
         type="button"
@@ -30,11 +30,43 @@
             <li class="nav-item text-light me-2">About-Us</li>
           </router-link>
         </ul>
-        <button class="btn btn-warning me-2">login</button>
-        <button type="button" class="btn btn-warning btn-rounded">
-          Sign up
-        </button>
+        <div v-if="loggedIn">
+          <router-link to="/my-account">
+            <button class="btn btn-warning me-2">My Account</button>
+          </router-link>
+        </div>
+        <div v-else>
+          <router-link to="/login">
+            <button class="btn btn-warning me-2">Login</button>
+          </router-link>
+        </div>
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      loggedIn: false,
+    };
+  },
+  mounted() {
+    // Check if the user is logged in on component mount
+    this.checkLoggedIn();
+  },
+  methods: {
+    checkLoggedIn() {
+      // Perform check for logged in user here
+      // For example, check for a stored token or session
+      const token = localStorage.getItem('token');
+      if (token) {
+        this.loggedIn = true;
+      } else {
+        this.loggedIn = true;
+      }
+    },
+  },
+};
+</script>
