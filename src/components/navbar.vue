@@ -20,7 +20,7 @@
           <router-link to="/" class="text-decoration-none">
             <li class="nav-item text-light me-2">acceuil</li>
           </router-link>
-          <router-link to="/bibliothèque" class="text-decoration-none">
+          <router-link to="/bibliotheque" class="text-decoration-none">
             <li class="nav-item text-light me-2">bibliothèque</li>
           </router-link>
           <router-link to="/Contactez-nous" class="text-decoration-none">
@@ -31,7 +31,7 @@
           </router-link>
         </ul>
         <div v-if="loggedIn">
-          <router-link to="/my-account">
+          <router-link to="/myaccount">
             <button class="btn btn-warning me-2">My Account</button>
           </router-link>
         </div>
