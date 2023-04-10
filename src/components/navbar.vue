@@ -64,7 +64,7 @@ export default {
       if (token) {
         this.loggedIn = true;
       } else {
-        this.loggedIn = true;
+        this.loggedIn = false;
       }
     },
   },
