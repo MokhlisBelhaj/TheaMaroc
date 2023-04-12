@@ -31,9 +31,18 @@
           </router-link>
         </ul>
         <div v-if="loggedIn">
-          <router-link to="/myaccount">
-            <button class="btn btn-warning me-2">My Account</button>
-          </router-link>
+          <div v-if="admin">
+            <router-link to="/dashboard">
+              <button class="btn btn-warning me-2">dashboard</button>
+            </router-link>
+          </div>
+          <div v-else>
+            <router-link to="/myaccount">
+              <button class="btn btn-warning me-2">My Account</button>
+            </router-link>
+          </div>
+
+          <div><button class="btn btn-danger mx-2" @click="logout">Logout</button></div>
         </div>
         <div v-else>
           <router-link to="/login">
@@ -45,27 +54,75 @@
   </nav>
 </template>
 
-<script>
+<!-- <script>
+import router from '../router';
+
 export default {
   data() {
     return {
       loggedIn: false,
     };
   },
-  mounted() {
-    // Check if the user is logged in on component mount
+  created() {
+
     this.checkLoggedIn();
   },
   methods: {
     checkLoggedIn() {
-      // Perform check for logged in user here
-      // For example, check for a stored token or session
-      const token = localStorage.getItem('token');
+   
+      const token = localStorage.getItem('access_token');
       if (token) {
         this.loggedIn = true;
+        const role = localStorage.getItem('role');
+        if(role=isAdmin){
+          this.admin=true
+        }else
+
+
       } else {
         this.loggedIn = false;
       }
+    },
+    logout() {
+      localStorage.clear();
+      this.checkLoggedIn()
+      router.push('/');
+    },
+  },
+};
+</script> -->
+<script>
+import router from "../router";
+
+export default {
+  data() {
+    return {
+      loggedIn: false,
+      admin: false,
+    };
+  },
+  created() {
+    this.checkLoggedIn();
+  },
+  methods: {
+    checkLoggedIn() {
+      const token = localStorage.getItem("access_token");
+      if (token) {
+        this.loggedIn = true;
+        const role = localStorage.getItem("role");
+        if (role === "isAdmin") {
+          this.admin = true;
+        } else {
+          this.admin = false;
+        }
+      } else {
+        this.loggedIn = false;
+      }
+    },
+    logout() {
+      localStorage.clear();
+      this.checkLoggedIn();
+      router.push("/");
     },
   },
 };
