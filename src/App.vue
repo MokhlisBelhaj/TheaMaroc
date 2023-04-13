@@ -8,14 +8,14 @@ const route = useRoute()
 <template>
     <!-- Navbar -->
     <!-- <navbar v-if="route.name !='login'"/> -->
-    <navbar v-if="route.name !== 'login'&& route.name !='register'" />
+    <navbar v-if="route.name !== 'login'&& route.name !='register'&& route.name !='dashboard' "/>
 
   <!-- Navbar -->
  
 
   <RouterView />
   <div>
-    <fo  v-if="route.name !='login'&& route.name !='register' "/>
+    <fo  v-if="route.name !='login'&& route.name !='register' && route.name !='dashboard' "/>
   </div>
 </template>
 

@@ -30,7 +30,7 @@
             <li class="nav-item text-light me-2">About-Us</li>
           </router-link>
         </ul>
-        <div v-if="loggedIn">
+        <div v-if="loggedIn" class="d-flex">
           <div v-if="admin">
             <router-link to="/dashboard">
               <button class="btn btn-warning me-2">dashboard</button>
